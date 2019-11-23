@@ -1,9 +1,14 @@
-/**
- * @format
- */
+//import libraries
+import React from "react";
+import ReactNative from "react-native";
 
-import {AppRegistry} from 'react-native';
-import App from './App';
-import {name as appName} from './app.json';
+//create component
+const App = () => {
+    return (
+        <Text>Hello World</Text>
+    );
+    //this fuction must return an object that 
+    //describes what it should look like on a device
+}
 
-AppRegistry.registerComponent(appName, () => App);
+//render component to screen
