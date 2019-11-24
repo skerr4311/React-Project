@@ -20,7 +20,11 @@ const styles = {
     },
 
     viewStyle: {
-        backgroundColor: 'grey'
+        backgroundColor: 'gainsboro',
+        height: 70,
+        justifyContent: 'center',
+        alignItems: 'center'
+        //paddingTop: 25 (for iphone)
     }
 };
 
