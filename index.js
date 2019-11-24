@@ -1,12 +1,17 @@
 //import libraries
 import React from "react";
-import {Text, AppRegistry} from "react-native";
+import { View, AppRegistry } from "react-native";
 
 import Header from './src/components/Header';
+import CarList from './src/components/CarList';
 
 //create component
 const App = () => {
-    return <Header />;
+    return (
+    <View>
+        <Header title={'Cars'}/>
+        <CarList />
+    </View>);
     //this fuction must return an object that 
     //describes what it should look like on a device
 }
