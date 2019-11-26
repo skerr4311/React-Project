@@ -3,13 +3,16 @@ import { View, Text } from 'react-native';
 import axios from 'axios';
 
 class CarList extends Component {
+    state = { carList: [] };
+
     componentDidMount() {
         axios.get('https://givecars.herokuapp.com')
         .then((response) => {
-            console.log(response)
-        })
+            this.setState({ carList: response.data });
+        });
     }
     render() {
+        console.log(this.state);
         return (
             <View>
                 <Text>Car List</Text>
