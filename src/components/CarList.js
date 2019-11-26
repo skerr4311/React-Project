@@ -6,16 +6,22 @@ class CarList extends Component {
     state = { carList: [] };
 
     componentDidMount() {
-        axios.get('https://givecars.herokuapp.com')
-        .then((response) => {
+        axios.get('https://givecars.herokuapp.com').then((response) => {
             this.setState({ carList: response.data });
         });
     }
+
+    renderList = () => {
+        return this.state.carList.map(brand => {
+            return <Text>{brand.model[0].name}</Text>
+        })
+    }
+
     render() {
         console.log(this.state);
         return (
             <View>
-                <Text>Car List</Text>
+                {this.renderList()}
             </View>
         );
     }
