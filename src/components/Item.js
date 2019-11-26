@@ -1,8 +1,11 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 
-const Item = () => {
-    return <View style={styles.viewStyle}/>;
+const Item = (props) => {
+    return (
+    <View style={styles.viewStyle}>
+        {props.children}
+    </View>);
 };
 
 const styles = {
