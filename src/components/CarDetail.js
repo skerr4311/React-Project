@@ -2,11 +2,14 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import Item from './Item';
+import ItemSection from './ItemSection';
 
 const CarDetail = (props) => {
     return (
     <Item>
-        <Text>{props.brand.model[0].name}</Text>
+        <ItemSection>
+            <Text>{props.brand.model[0].name}</Text>
+        </ItemSection> 
     </Item>)
 }
 

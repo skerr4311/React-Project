@@ -13,6 +13,7 @@ const styles = {
         borderWidth: 1,
         borderColor: 'gainsboro',
         shadowColor: 'black',
+        borderBottomWidth: 0,
         shadowOffSet: { width: 1, height:1 },
         opacity: 0.1,
         marginLeft: 5,
