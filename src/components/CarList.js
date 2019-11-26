@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import { View, Text } from 'react-native';
 import axios from 'axios';
 
+import CarDetail from './CarDetail';
+
 class CarList extends Component {
     state = { carList: [] };
 
@@ -13,7 +15,7 @@ class CarList extends Component {
 
     renderList = () => {
         return this.state.carList.map(brand => {
-            return <Text>{brand.model[0].name}</Text>
+            return <CarDetail key={brand.model[0].name} brand={brand} />
         })
     }
 
