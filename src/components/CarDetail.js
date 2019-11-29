@@ -1,16 +1,46 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 
 import Item from './Item';
 import ItemSection from './ItemSection';
 
-const CarDetail = (props) => {
+const CarDetail = ({ brand }) => {
+    const { headerContainer, headerText, imageStyle } = styles;
+
     return (
     <Item>
         <ItemSection>
-            <Text>{props.brand.model[0].name}</Text>
+            <View style={headerContainer}>
+                <Text style={headerText}>{brand.brand}</Text>
+                <Text style={headerText}>{brand.model[0].name}</Text>
+            </View>    
         </ItemSection> 
-    </Item>)
+        <ItemSection>
+            <Image
+                style={imageStyle}
+                source={{ uri: brand.model[0].image }} 
+            />
+        </ItemSection>
+    </Item>
+    )
 }
+
+const styles = {
+    headerContainer: {
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    },
+    headerText: {
+        fontSize: 10,
+        fontWeight: '500',
+        textTransform: 'uppercase',
+        color: 'black'
+    },
+    imageStyle: {
+        height: 300,
+        flex: 1,
+        width: 0
+    }
+};
 
 export default CarDetail;
