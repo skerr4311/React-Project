@@ -1,11 +1,15 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
+import { tsPropertySignature } from '@babel/types';
 
-const Button = () => {
+const Button = props => {
     const { buttonStyle, textStyle } = styles
 
     return (
-    <TouchableOpacity style={buttonStyle}>
+    <TouchableOpacity 
+        onPress={props.buttonPress}
+        style={buttonStyle}
+    >
         <Text style={textStyle}>Click me</Text>
     </TouchableOpacity> 
     );
